@@ -34,11 +34,22 @@
         }
 
         nav .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        nav .logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        nav .logo-text {
             font-size: 1.5rem;
             font-weight: 700;
             letter-spacing: 2px;
-            color: #D4AF37;
-            text-decoration: none;
+            color: #FF5722;
         }
 
         nav .nav-links {
@@ -55,11 +66,11 @@
         }
 
         nav .nav-links a:hover {
-            color: #D4AF37;
+            color: #FF5722;
         }
 
         nav .cta-btn {
-            background: #D4AF37;
+            background: #FF5722;
             color: #0B0B0B;
             padding: 0.6rem 1.5rem;
             border: none;
@@ -134,7 +145,7 @@
         }
 
         .hero .highlight {
-            color: #D4AF37;
+            color: #FF5722;
         }
 
         .hero p {
@@ -153,7 +164,7 @@
 
         /* ==================== BUTTONS ==================== */
         .btn-primary {
-            background: #D4AF37;
+            background: #FF5722;
             color: #0B0B0B;
             padding: 1rem 2.5rem;
             border: none;
@@ -285,7 +296,7 @@
         .stat-item .number {
             font-size: 2.5rem;
             font-weight: 700;
-            color: #D4AF37;
+            color: #FF5722;
         }
 
         .stat-item .label {
@@ -309,7 +320,7 @@
             color: white;
             padding: 2.5rem;
             border-radius: 8px;
-            border: 2px solid #D4AF37;
+            border: 2px solid #FF5722;
             transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
@@ -328,7 +339,7 @@
         .service-card h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: #D4AF37;
+            color: #FF5722;
         }
 
         .service-card p {
@@ -347,14 +358,14 @@
         }
 
         .service-card .who {
-            color: #D4AF37;
+            color: #FF5722;
             font-weight: 600;
             margin-bottom: 1.5rem;
         }
 
         .service-card button {
             align-self: flex-start;
-            background: #D4AF37;
+            background: #FF5722;
             color: #0B0B0B;
             padding: 0.75rem 1.75rem;
             border: none;
@@ -398,7 +409,7 @@
             padding: 1.5rem;
             border-radius: 8px;
             margin-top: 1.5rem;
-            border-left: 4px solid #D4AF37;
+            border-left: 4px solid #FF5722;
         }
 
         .credentials h4 {
@@ -420,13 +431,13 @@
 
         .credentials li::before {
             content: '✓ ';
-            color: #D4AF37;
+            color: #FF5722;
             font-weight: 700;
             margin-right: 0.5rem;
         }
 
         .about-image {
-            background: linear-gradient(135deg, #D4AF37, #B8860B);
+            background: linear-gradient(135deg, #FF5722, #E64A19);
             border-radius: 8px;
             height: 400px;
             display: flex;
@@ -463,7 +474,7 @@
         .step-number {
             width: 60px;
             height: 60px;
-            background: #D4AF37;
+            background: #FF5722;
             color: #0B0B0B;
             border-radius: 50%;
             display: flex;
@@ -493,7 +504,7 @@
             right: -1.5rem;
             top: 30px;
             font-size: 1.5rem;
-            color: #D4AF37;
+            color: #FF5722;
         }
 
         .step:last-child::after {
@@ -511,7 +522,7 @@
         .cta-final h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            color: #D4AF37;
+            color: #FF5722;
         }
 
         .cta-final p {
@@ -528,7 +539,7 @@
             background: #0B0B0B;
             color: white;
             padding: 2rem;
-            border-top: 2px solid #D4AF37;
+            border-top: 2px solid #FF5722;
         }
 
         .footer-content {
@@ -541,7 +552,7 @@
         }
 
         .footer-col h4 {
-            color: #D4AF37;
+            color: #FF5722;
             margin-bottom: 1rem;
             font-size: 1.1rem;
         }
@@ -556,7 +567,7 @@
         }
 
         .footer-col a:hover {
-            color: #D4AF37;
+            color: #FF5722;
         }
 
         .social-links {
@@ -568,18 +579,18 @@
         .social-links a {
             width: 40px;
             height: 40px;
-            border: 1px solid #D4AF37;
+            border: 1px solid #FF5722;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #D4AF37;
+            color: #FF5722;
             text-decoration: none;
             transition: all 0.3s ease;
         }
 
         .social-links a:hover {
-            background: #D4AF37;
+            background: #FF5722;
             color: #0B0B0B;
         }
 
@@ -599,7 +610,7 @@
         }
 
         .footer-bottom a:hover {
-            color: #D4AF37;
+            color: #FF5722;
         }
 
         /* ==================== RESPONSIVE DESIGN ==================== */
@@ -718,13 +729,16 @@
 
     <!-- ==================== NAVIGATION ==================== -->
     <nav>
-        <a href="#" class="logo">MONARCH</a>
+        <a href="#" class="logo">
+            <img src="logo.jog" alt="Monarch Logo">
+            <span class="logo-text">MONARCH</span>
+        </a>
         <ul class="nav-links">
             <li><a href="#services">Services</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#process">Process</a></li>
         </ul>
-        <button class="cta-btn" onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'})">Book Session</button>
+        <a href="https://calendly.com/dr-allenlaguerre/talk-with-me?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnUnGFrmH6XNg02Qrjq08QURoaIfG3BWc1aQG-tHnaa9zewUfPArAoMb_XL4M_aem_4Hwe_wLu8qTIBUSsOrNyjA&utm_id=97760_v0_s00_e0_tv3_a1denngnxj3acx&month=2026-04" target="_blank" class="cta-btn">Book Session</a>
     </nav>
 
     <!-- ==================== HERO SECTION ==================== -->
@@ -733,7 +747,7 @@
             <h1>Transform Your <span class="highlight">Body.</span><br>Master Your <span class="highlight">Discipline.</span></h1>
             <p>Elite coaching for serious results. Proven strategies. Real accountability. Your transformation starts today.</p>
             <div class="hero-buttons">
-                <button class="btn-primary" onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'})">Book Your Free Consultation</button>
+                <a href="https://calendly.com/dr-allenlaguerre/talk-with-me?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnUnGFrmH6XNg02Qrjq08QURoaIfG3BWc1aQG-tHnaa9zewUfPArAoMb_XL4M_aem_4Hwe_wLu8qTIBUSsOrNyjA&utm_id=97760_v0_s00_e0_tv3_a1denngnxj3acx&month=2026-04" target="_blank" class="btn-primary">Book Your Free Consultation</a>
                 <button class="btn-secondary" onclick="document.getElementById('social-proof').scrollIntoView({behavior: 'smooth'})">See Results</button>
             </div>
         </div>
@@ -809,7 +823,7 @@
                     <p>Personalized sessions tailored to your goals. Direct access to coaching expertise, real-time form correction, and undivided accountability.</p>
                     <div class="who-label">Perfect For:</div>
                     <div class="who">Serious transformation seekers</div>
-                    <button onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'})">Learn More</button>
+                    <button onclick="window.open('https://calendly.com/dr-allenlaguerre/talk-with-me?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnUnGFrmH6XNg02Qrjq08QURoaIfG3BWc1aQG-tHnaa9zewUfPArAoMb_XL4M_aem_4Hwe_wLu8qTIBUSsOrNyjA&utm_id=97760_v0_s00_e0_tv3_a1denngnxj3acx&month=2026-04')">Learn More</button>
                 </div>
 
                 <div class="service-card">
@@ -818,7 +832,7 @@
                     <p>Full programming and guidance delivered remotely. Check-ins, video form reviews, and nutrition support without the commute.</p>
                     <div class="who-label">Perfect For:</div>
                     <div class="who">Disciplined professionals</div>
-                    <button onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'})">Learn More</button>
+                    <button onclick="window.open('https://calendly.com/dr-allenlaguerre/talk-with-me?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnUnGFrmH6XNg02Qrjq08QURoaIfG3BWc1aQG-tHnaa9zewUfPArAoMb_XL4M_aem_4Hwe_wLu8qTIBUSsOrNyjA&utm_id=97760_v0_s00_e0_tv3_a1denngnxj3acx&month=2026-04')">Learn More</button>
                 </div>
 
                 <div class="service-card">
@@ -827,7 +841,7 @@
                     <p>Done-for-you training plans built around your schedule and goals. Detailed protocols. Measurable progression. No guessing.</p>
                     <div class="who-label">Perfect For:</div>
                     <div class="who">Self-motivated individuals</div>
-                    <button onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'})">Learn More</button>
+                    <button onclick="window.open('https://calendly.com/dr-allenlaguerre/talk-with-me?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnUnGFrmH6XNg02Qrjq08QURoaIfG3BWc1aQG-tHnaa9zewUfPArAoMb_XL4M_aem_4Hwe_wLu8qTIBUSsOrNyjA&utm_id=97760_v0_s00_e0_tv3_a1denngnxj3acx&month=2026-04')">Learn More</button>
                 </div>
             </div>
         </div>
@@ -837,6 +851,11 @@
     <section class="about" id="about">
         <div class="container">
             <div class="section-header">
+                <h2>Our Mission</h2>
+                <p class="mission-statement" style="font-size: 1.3rem; font-weight: 500; color: #FF5722; margin: 1.5rem 0; line-height: 1.8;">"Monarch exists to guide individuals through real transformation—developing strength, confidence, and discipline that extends far beyond the gym."</p>
+            </div>
+
+            <div class="section-header" style="margin-top: 3rem;">
                 <h2>About Your Coach</h2>
                 <p class="subtitle">Credentialed. Disciplined. Results-Obsessed.</p>
             </div>
@@ -907,7 +926,7 @@
         <div class="container">
             <h2>Ready for Real Change?</h2>
             <p>Your first consultation is free. Let's design your transformation together. No commitments. No pressure. Just clarity.</p>
-            <button class="btn-primary">Book Your Free Consultation</button>
+            <a href="https://calendly.com/dr-allenlaguerre/talk-with-me?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnUnGFrmH6XNg02Qrjq08QURoaIfG3BWc1aQG-tHnaa9zewUfPArAoMb_XL4M_aem_4Hwe_wLu8qTIBUSsOrNyjA&utm_id=97760_v0_s00_e0_tv3_a1denngnxj3acx&month=2026-04" target="_blank" class="btn-primary">Book Your Free Consultation</a>
         </div>
     </section>
 
@@ -931,11 +950,9 @@
             <div class="footer-col">
                 <h4>Connect</h4>
                 <div class="social-links">
-                    <a href="https://facebook.com" target="_blank" title="Facebook">f</a>
-                    <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
-                    <a href="https://twitter.com" target="_blank" title="Twitter">𝕏</a>
+                    <a href="https://www.instagram.com/dr.allenpt/" target="_blank" title="Instagram">📷 Instagram</a>
                 </div>
-                <p style="margin-top: 1rem;">Follow for daily discipline tips and client wins.</p>
+                <p style="margin-top: 1rem;">Follow @dr.allenpt for daily discipline tips and client transformation stories.</p>
             </div>
         </div>
 
